@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snapchat Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-md bg-white rounded-xl shadow-md p-6 text-center">
+    <!-- Snapchat Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/Snapchat_logo.svg" alt="Snapchat Logo" class="w-12 h-12 mx-auto mb-6">
+
+    <!-- Title -->
+    <h2 class="text-2xl font-bold mb-2">Log In to Snapchat</h2>
+
+    <!-- Description -->
+    <p class="text-sm text-gray-500 mb-6">Welcome back! Please enter your details.</p>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-4 text-left">
+      <!-- Username/Email -->
+      <input type="text" id="username" placeholder="Username or Email" required
+        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+
+      <!-- Password -->
+      <div class="relative">
+        <input type="password" id="password" placeholder="Password" required
+          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        <span id="togglePassword" class="absolute right-4 top-3 text-sm text-gray-600 cursor-pointer">Show</span>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit"
+        class="w-full py-3 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-md">Log In</button>
+    </form>
+
+    <!-- Forgot Link -->
+    <p class="mt-4 text-sm text-gray-500">
+      <a href="#" class="text-yellow-500 hover:underline">Forgot your password?</a>
+    </p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const togglePassword = document.getElementById("togglePassword");
+    const password = document.getElementById("password");
+
+    togglePassword.addEventListener("click", () => {
+      const type = password.type === "password" ? "text" : "password";
+      password.type = type;
+      togglePassword.textContent = type === "text" ? "Hide" : "Show";
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Simulated login logic (replace with real backend API call)
+      const username = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      alert(Logged in with:\nUsername: ${username}\nPassword: ${pass});
+    });
+  </script>
+
+</body>
+</html>
+
+Anshad Jio, [01-06-2025 10:30 AM]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snapchat Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffc00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #fffc00;
+      border: none;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f1e600;
+    }
+
+    .signup-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .signup-link a {
+      color: #000;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/Snapchat_logo.svg" alt="Snapchat Logo" />
+    <h2>Log In to Snapchat</h2>
+    <form>
+      <input type="text" placeholder="Username or Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <div class="signup-link">
+      New to Snapchat? <a href="#">Sign up</a>
+    </div>
+  </div>
+</body>
+</html>
